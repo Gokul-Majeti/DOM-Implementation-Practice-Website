@@ -15,8 +15,14 @@ box4.addEventListener('click',()=>{
         box4.style.backgroundColor="yellow";
 });
 const greetbutn = document.getElementById('button-greet');
-greetbutn.addEventListener('click',()=>{
-        const text = document.getElementById('personname').value;
+greetbutn.addEventListener('click',()=>{        
+        const text = document.getElementById('personname').value;        
         const greetheader=document.getElementById('headergreet');
-        greetheader.innerText='Hello, '+text;
+        if(text!==""){                
+                greetheader.innerText='Hello, '+text;
+        }
+        else{
+                greetheader.innerText='Hello';
+        }
+        
 });
